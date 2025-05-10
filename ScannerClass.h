@@ -2,8 +2,8 @@
 #define SCANNERCLASS_H
 
 #include <string>
+#include <vector>
 
-#pragma once
 
 enum TokenType {
     NUMBER,
@@ -26,11 +26,12 @@ struct Token {
 
 };
 
-class ScannerClass
+class Scanner
 {
 public:
-    ScannerClass(const std::string& input);
+    Scanner(const std::string& input);
    Token getNextToken();
+   std::vector<Token> tokenize();
 
 private:
 std::string input;
@@ -38,6 +39,6 @@ size_t pos;
 
 };
 
-std::string tokenTypeToString(TokenType type);
+std::string tokenTypeString(TokenType type);
 
 #endif
