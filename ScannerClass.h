@@ -21,7 +21,7 @@ struct Token {
     TokenType type;
     std::string value;
 
-    Token(TokenType typeOfToken, const string& valueOfToken)
+    Token(TokenType typeOfToken, const std::string& valueOfToken)
     : type(typeOfToken), value(valueOfToken) {}
 
 };
@@ -29,11 +29,11 @@ struct Token {
 class ScannerClass
 {
 public:
-    ScannerClass(const string& input);
+    ScannerClass(const std::string& input);
    Token getNextToken();
 
 private:
-string input;
+std::string input;
 size_t pos;
 
 };

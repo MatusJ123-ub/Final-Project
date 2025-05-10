@@ -7,7 +7,7 @@ int main() {
     std::cout << "Enter input: ";
     std::getline(std::cin, input);
 
-    ScannerClass scanner(input);
+    Scanner scanner(input);
     std::vector<Token> tokens;
 
     while (true) {
