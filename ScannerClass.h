@@ -31,7 +31,7 @@ class Scanner
 public:
     Scanner(const std::string& input);
    Token getNextToken();
-   std::vector<Token> tokenize();
+  
 
 private:
 std::string input;

@@ -17,7 +17,7 @@ int main() {
     }
 
     for (const Token& token : tokens) {
-        std::cout << "Token(Type: " << tokenTypeToString(token.type)
+        std::cout << "Token(Type: " << tokenTypeString(token.type)
                   << ", Value: \"" << token.value << "\")\n";
     }
 
