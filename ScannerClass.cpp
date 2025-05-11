@@ -1,9 +1,10 @@
 #include "ScannerClass.h"
-#include <string>
+#include <cctype>
 
-Scanner::Scanner(const std::string& input) : input(input), pos(0) {}
+Token::Token(TokenType typeOfToken, const std::string& valueOfToken)
+: type(typeOfToken), value(valueOfToken) {}
 
-Token Scanner::getNextToken() {
+Token getNextToken(const std::string& input, size_t& pos) {
     while (pos < input.length() && std::isspace(input[pos])) {
         pos++;
     }
